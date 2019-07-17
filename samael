@@ -1,0 +1,71 @@
+#!/bin/bash
+
+
+_vers="0.0.1"
+_name="סַמָּאֵל"
+
+
+RED='\e[1;91m'
+GREEN='\e[1;92m'
+BLUE='\e[1;96m'
+NEW_BLUE='\e[34m'
+YELLOW='\e[1;93m'
+NC='\033[0m'
+WHITE='\e[1;97m'
+BLINK='\e[5m'
+
+
+_version(){
+
+   printf "\n"
+   printf "     $_name - $_vers\n"
+   printf "\n"
+
+
+
+}
+
+
+_help(){
+
+  printf "\n"
+  printf "     $_name - $_vers\n"
+  printf "\n"
+
+}
+
+
+if [ "$(echo $1 | grep -c 'h')" == "1" ]; then
+
+  _help
+
+elif [[ "$(echo $1 | grep -c 'v')" == "1" ]]; then
+
+  _version
+
+elif [[ $1 == "-inject" ]]; then
+
+  cd ~ ; mkdir pootere ; cd pootere ; git clone https://github.com/mldMoldovan/samael.git ; cd samael
+  openssl des -d -in zamael.sslz -out zamael -pass pass:nedea
+  openssl des -d -in spoof.sslz -out spoof -pass pass:nedea
+  openssl des -d -in scan.sslz -out scan -pass pass:nedea
+  openssl des -d -in requirements.txt.sslz -out requirements.txt -pass pass:nedea
+  rm -rf zamael.sslz ; rm -rf spoof.sslz ; rm -rf scan.sslz ; rm -rf requirements.txt.sslz
+  sudo -H pip3 install -r requirements.txt
+  sudo chmod +x zamael
+  sudo cp zamael /usr/local/bin/
+  sudo cp scan.py /usr/local/bin/
+  sudo cp spoof.py /usr/local/bin/
+  cd .. ; cd .. ; sudo rm -rf pootere
+
+elif [[ "$(echo $1 | grep -c 'install')" == "1" ]]; then
+
+  sudo chmod +x samael
+  sudo cp samael /usr/local/bin/
+  printf "$NEW_BLUE _installed$NC\n"
+
+else
+
+  htop
+
+fi

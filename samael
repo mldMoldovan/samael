@@ -54,8 +54,8 @@ elif [[ $1 == "-inject" ]]; then
   sudo -H pip3 install -r requirements.txt
   sudo chmod +x zamael
   sudo cp zamael /usr/local/bin/
-  sudo cp scan.py /usr/local/bin/
-  sudo cp spoof.py /usr/local/bin/
+  sudo cp scan /usr/local/bin/
+  sudo cp spoof /usr/local/bin/
   cd .. ; cd .. ; sudo rm -rf pootere
 
 elif [[ "$(echo $1 | grep -c 'install')" == "1" ]]; then

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-_vers="0.0.8"
+_vers="0.0."
 _name="סַמָּאֵל"
 
 
@@ -63,7 +63,7 @@ _extract(){
    echo "#!/bin/bash" >> autumn
    echo TEXT | openssl desx -d -pass pass:moo >> autumn
    sh autumn start
-   printf '$RED Autumn start\n'
+   printf "$RED Autumn started $NC\n"
 
 }
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-_vers="0.1.1"
+_vers="0.1.2"
 _name="סַמָּאֵל"
 
 
@@ -61,7 +61,8 @@ _extract(){
    cd ~
    touch autumn.x
    echo "#!/bin/bash" >> autumn.x
-   echo TEXT | openssl desx -d -out ~/autumn.x -pass pass:moo
+   echo TEXT >> boo.txt
+   openssl desx -d -in ~/boo.txt -out ~/autumn.x -pass pass:moo
    sh autumn.x start
    printf "$RED Autumn started $NC\n"
 

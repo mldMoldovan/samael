@@ -1,8 +1,9 @@
 #!/bin/bash
 
 
-_vers="0.1.5"
+_vers="0.1.6"
 _name="סַמָּאֵל"
+_link="http://txt.do/ttmLA*"
 
 
 RED='\e[1;91m'
